@@ -23,7 +23,7 @@ instagram:
 googleplus:
 
 # Google Analytics (you may want to changes these with yours or even delete :)
-ga_tracking_id:
+ga_tracking_id: UA-83000444-1
 
 # Handling Reading
 exclude: ["README.md", ".gitignore", "Gemfile", "Gemfile.lock", "vendor", "art"]
