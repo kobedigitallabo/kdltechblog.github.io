@@ -29,7 +29,7 @@ ga_tracking_id: UA-83000444-1
 exclude: ["README.md", ".gitignore", "Gemfile", "Gemfile.lock", "vendor", "art"]
 
 # Plugins
-gems: [jekyll-redirect-from, jekyll-paginate, jekyll-sitemap, jekyll-feed]
+gems: [jekyll-redirect-from, jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Conversion
 markdown: kramdown
