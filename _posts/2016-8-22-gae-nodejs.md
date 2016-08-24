@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Google Cloud Platform SDKをセットアップしてGAEでnode.jsアプリを動かしてみる
+published: true
 ---
 
 村岡です。[Google App Engine for node.js](https://cloud.google.com/nodejs/)がローンチされてしばらく経つのでGoogle Cloud Platform SDKをセットアップするところからの流れをやってみました。  
@@ -10,7 +11,7 @@ title: Google Cloud Platform SDKをセットアップしてGAEでnode.jsアプ�
 
 ## Google Cloud Platform SDKをインストールする
 
-GAEはPython2.7で動きます。ボクの環境はPhothon3がデフォルトなので[pyenv](https://github.com/yyuu/pyenv)でPython2.7にしてからSDKをセットアップします。
+GAEはPython2.7で動きます。ボクの環境はPython3がデフォルトなので[pyenv](https://github.com/yyuu/pyenv)でPython2.7にしてからSDKをセットアップします。
 
 ```
 $ pyenv activate python2
