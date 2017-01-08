@@ -1,6 +1,6 @@
 ---
 layout: tag
 title: 'Tags: Arduino'
-tag: Arduino
+tag: arduino
 permalink: tags/arduino/
 ---
