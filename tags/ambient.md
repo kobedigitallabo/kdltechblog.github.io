@@ -1,6 +1,6 @@
 ---
 layout: tag
 title: 'Tags: Ambient.io'
-tag: Ambient.io
+tag: ambient
 permalink: tags/ambient/
 ---

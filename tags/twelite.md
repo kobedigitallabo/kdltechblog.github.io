@@ -1,6 +1,6 @@
 ---
 layout: tag
 title: 'Tags: TWE-LITE'
-tag: TWE-LITE
+tag: twelite
 permalink: tags/twelite/
 ---

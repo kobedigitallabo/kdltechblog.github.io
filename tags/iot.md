@@ -1,6 +1,6 @@
 ---
 layout: tag
 title: 'Tags: IoT'
-tag: IoT
+tag: iot
 permalink: tags/iot/
 ---
