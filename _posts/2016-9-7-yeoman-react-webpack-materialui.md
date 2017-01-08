@@ -2,6 +2,7 @@
 layout: post
 title: generator-react-webpack+Material UIでMaterial UIなWebアプリをさくっと開発する
 published: true
+tags: [material]
 ---
 
 村岡です。個人的にWebアプリは[Yeoman](http://yeoman.io/)で作りはじめることがけっこう多いです。開発環境のセットアップとか自動化とか複雑なことをいろいろ考えなくて済むのがいいですね。  
