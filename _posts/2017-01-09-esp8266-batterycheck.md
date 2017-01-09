@@ -1,6 +1,6 @@
 ---
 published: true
-layout: null
+layout: post
 title: ESP8266とambientで電池の放電電圧を可視化してみる
 tags:
   - iot
