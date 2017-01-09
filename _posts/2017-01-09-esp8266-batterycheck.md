@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: ESP8266とambientで電池の放電電圧を可視化してみる
+title: ESP8266とAmbientで電池の放電電圧を可視化してみる
 tags:
   - iot
   - arduino
@@ -73,8 +73,8 @@ Arduinoのアナログポートを２つ利用して、2個の電池を同時に
 [Ambient\_ESP8266\_Arduino\_BatteryCheck-slave](https://github.com/haru-kdl/Ambient_ESP8266_Arduino_BatteryCheck/tree/master/Ambient_ESP8266_BatteryCheck-slave)
 
 ## ESP8266側で取得したデータをクラウドにアップする
-Arduino側より取得したデータをESP8266側で受信しインターネット経由で、ambientに送信します。
-ambient側の設定は先に済ませておく必要があります。設定方法はAmbientのチュートリアル[Ambientを使ってみる – Ambient](https://ambidata.io/docs/gettingstarted/)を参考に設定しました。
+Arduino側より取得したデータをESP8266側で受信しインターネット経由で、Ambientに送信します。
+Ambient側の設定は先に済ませておく必要があります。設定方法はAmbientのチュートリアル[Ambientを使ってみる – Ambient](https://ambidata.io/docs/gettingstarted/)を参考に設定しました。
 
 ESP8266はI2CではMasterにしか設定出来ないために、ESP8266をMaster、ArduinoをSlaveとして作成しました。
 ソースはgithubにアップしておきました。
