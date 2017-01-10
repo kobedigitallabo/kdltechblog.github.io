@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: IoT放電器でeneloopの放電特性をみてみた
 tags:
@@ -10,9 +10,10 @@ tags:
   - mini4w
 ---
 # はじめに
-こんにちは。ナカニシです。
+全国のエネループファンの皆さんこんにちは。ナカニシです。
+
 [ESP8266とAmbientで電池の放電電圧を可視化してみる \| KDL Tech Blog](http://kobedigitallabo.github.io/2017/01/09/esp8266-batterycheck/)
-にて作成したIoT放電器を利用することで電池の放電状況を可視化できたので、手元のeneloopで実験してみました。
+にて作成した自作のIoT放電器を利用することで電池の放電状況を可視化できたので、さっそく手元のeneloopで実験してみました。
 
 ## 動機
 今まで3年ほど育ててきたeneloopが手元にあるのですが実際に数値化したことも無く、リフレッシュ放電を行った事も思い起こせば無かった事に気づきました。
