@@ -9,8 +9,6 @@ tags:
   - ambient
   - mini4w
 ---
-![eneloop.png (422.1 kB)](https://img.esa.io/uploads/production/attachments/3505/2017/01/10/10863/7d886646-8be9-4808-ba56-34b3a30455ae.png)
-
 # はじめに
 全国のエネループファンの皆さんこんにちは。ナカニシです。
 
