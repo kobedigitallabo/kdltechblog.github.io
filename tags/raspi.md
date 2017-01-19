@@ -1,7 +1,7 @@
 ---
 layout: tag
-title: 'Tags: Raspberry Pi'
-tag: raspberrypi
-permalink: tags/raspberrypi/
+title: 'Tags: Rasberry Pi'
+tag: rasberrypi
+permalink: tags/rasberrypi/
 published: true
 ---
