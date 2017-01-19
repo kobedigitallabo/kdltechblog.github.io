@@ -16,3 +16,5 @@ ambient:
   name: Ambient.io
 mini4w:
   name: ミニ四駆
+raspi:
+  name: Raspberry Pi
