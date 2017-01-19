@@ -1,6 +1,7 @@
 ---
 layout: tag
 title: 'Tags: Raspberry Pi'
-tag: raspi
+tag: raspberrypi
 permalink: tags/raspberrypi/
+published: true
 ---
