@@ -45,6 +45,7 @@ USBポートに差し込み、USBオーディオアダプタのスピーカー�
 
 コマンドにて確認すると、認識はされているようです。
 ドライバを入れる必要が無いのは素敵です。
+
 ```
 $ sudo lsusb
 Bus 001 Device 005: ID 0d8c:0014 C-Media Electronics, Inc.  ←USBオーディオアダプタ
@@ -58,6 +59,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 ## オーディオアダプタの優先順位を変更する
 先に出力先を変更します。
+
 ```
 １． $ sudo raspi-config を実行し、設定メニューを表示させます
 ２．メニューより （8 Advanced Options） を選択します
@@ -67,11 +69,13 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
 
 次に設定ファイルを変更します。
+
 ```
 $ sudo vi /usr/share/alsa/alsa.conf
 ```
 
 ファイル内の以下の箇所を修正しました。
+
 ```
 〜〜〜
 
@@ -100,11 +104,14 @@ defaults.pcm.card 1         ←０を１に変更
 ```
 
 編集後は保存し、再起動します。
+
 ```
 $ sudo reboot
 ```
+
 ## テスト再生してみる
 再起動後に再度テスト再生してみます。
+
 ```
 $ aplay /usr/share/sounds/alsa/Front_Center.wav 
 ```
@@ -114,6 +121,7 @@ $ aplay /usr/share/sounds/alsa/Front_Center.wav
 音声が無事に出力できたので、USBオーディオアダプタのマイク側も利用できるか確認してみます。
 
 まずデバイスのIDを調べてみます。card 1と認識されていました。
+
 ```
 $ arecord -l
 **** List of CAPTURE Hardware Devices ****
@@ -124,6 +132,7 @@ card 1: Device [USB Audio Device], device 0: USB Audio [USB Audio]
 
 デバイスの現在の設定値を調べてみます。
 マイクは0-35の範囲で設定でき、現在20に設定されていました。
+
 ```
 $ amixer sget Mic -c 1
 Simple mixer control 'Mic',0
@@ -135,6 +144,7 @@ Simple mixer control 'Mic',0
 ```
 
 入力レベルを変更してみます。
+
 ```
  $mixer sset Mic 35 -c 1
 Simple mixer control 'Mic',0
@@ -148,6 +158,7 @@ Simple mixer control 'Mic',0
 マイクのテストをしてみます。
 マイクから入力された音声が、スピーカーより出力されました。
 停止は ctl+c キーで停止出来ます。
+
 ```
  $ arecord -f S16_LE -r 44100 -D hw:1 | aplay
 Recording WAVE 'stdin' : Signed 16 bit Little Endian, Rate 44100 Hz, Mono
@@ -158,9 +169,11 @@ Aborted by signal Interrupt...
 # まとめ
 ここまでやってみて、ノイズの原因が見えてきたのですが、RaspberryPi 3 の3.5mmのオーディオジャックとコンポジット端子のようです。
 本家のサイト[ラズベリーパイ3モデルB ](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) にもきっちり
+
 ```
 Combined 3.5mm audio jack and composite video
 ```
+
 と記載がありました。
 
 ノイズの原因は、RaspberryPi Bのオーディオ出力ジャックは通常の３極（L,R,G）ではなく、ビデオ出力も含んだ４極（L,R,G,V）であるために、接続したイヤホンが原因でノイズが発生していたようです。
@@ -175,4 +188,3 @@ RaspberryPiはHDMI出力も備えていますので、TVより出力しても良
 # 参考・関連
 [オーディオも自作すると面白い！: piCorePlayer：RaspberryPi B\+のオーディオ出力がノイズだらけ。。。\(T\_T\)](http://kitatokyo2013.blogspot.jp/2015/02/picoreplayerraspberrypi-b.html)
 [Raspberry Pi \| aplayコマンドで音声の冒頭が再生されない問題→アナログスピーカーで解決！ – たぷん日記](http://www.tapun.net/raspi/raspberry-pi-analog-speaker)
-
