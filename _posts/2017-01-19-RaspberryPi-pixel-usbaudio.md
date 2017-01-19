@@ -1,6 +1,11 @@
 ---
-published: false
+published: true
+layout: post
+title: RASPBIAN JESSIE WITH PIXEL でUSBオーディオアダプタを使う
+tags:
+  - raspi
 ---
+
 ![image.png (159.4 kB)](https://img.esa.io/uploads/production/attachments/3505/2017/01/19/10863/a3b7ea87-216c-407b-9466-356e1afc36fe.png)
 
 
